@@ -1,6 +1,7 @@
 import '@/shared/css/global.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { BackgroundGradient, LenisProvider } from '@/shared/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        suppressHydrationWarning
+        className={inter.className}
+      >
+        <LenisProvider>
+          <BackgroundGradient />
+
+          {children}
+        </LenisProvider>
+      </body>
     </html>
   )
 }

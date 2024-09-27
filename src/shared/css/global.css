@@ -4,17 +4,22 @@
 
 @layer base {
   :root {
-    --background: #0d100f;
-    --foreground: #fefefe;
-    --primary: #db2500;
+    --background: 160deg 19% 6%;
+    --foreground: 0deg 0% 100%;
+    --primary: 10deg 100% 43%;
+  }
+
+  html {
+    scrollbar-width: none;
   }
 
   body {
-    @apply bg-background text-foreground min-h-screen overflow-x-clip;
+    @apply bg-background w-screen overflow-x-clip text-[30vw] sm:text-[20vw] leading-[90%] font-extrabold text-primary;
   }
 
   picture {
-    @apply block;
+    /* the z index is used because the NextJS Image Component has a position absolute when we use the fill prop */
+    @apply block relative h-screen w-full -z-10;
   }
 
   img {
