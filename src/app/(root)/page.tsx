@@ -5,6 +5,7 @@ const Scene = dynamic(() => import('./_components/scene/index'), { ssr: false })
 
 export default function Page() {
   return (
+    /* Viewport Height: header + GSAP Scroll Trigger + Footer */
     <div className="h-[calc(25vh+5000px+180vh)] w-full grid grid-rows-[25vh_1fr_100vh]">
       <div className="italic grid place-items-center">
         scroll <br /> down

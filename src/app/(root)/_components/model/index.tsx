@@ -81,7 +81,6 @@ export default function Model() {
                 canvas.style.opacity = `${1 - (progress - 0.8) * 5}`
               }
 
-              console.log(animationTime)
               actions['Animation'].time = animationTime
             }
           },
