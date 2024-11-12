@@ -14,10 +14,10 @@ export default function Scene() {
       style={{ height: '100vh', width: '100vw' }}
     >
       <PerspectiveCamera
-        makeDefault
         fov={75}
-        near={0.1}
         far={100}
+        near={0.1}
+        makeDefault
         position={[0, 0, 0.5]}
         aspect={window.innerWidth / window.innerHeight}
       />
@@ -29,11 +29,11 @@ export default function Scene() {
       </Suspense>
 
       <OrbitControls
+        makeDefault
         enableDamping
+        enablePan={false}
         enableZoom={false}
         dampingFactor={0.1}
-        makeDefault
-        enablePan={false}
         minPolarAngle={Math.PI / 2}
         maxPolarAngle={Math.PI / 2}
       />
